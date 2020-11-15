@@ -17,7 +17,7 @@ const images = [
 ];
 
 const galleryRef = document.getElementById('gallery');
-console.log(galleryRef);
+// console.log(galleryRef);
 
 for (let item of images) {
     galleryRef.insertAdjacentHTML('afterbegin', `<li><img src = ${item.url} alt = ${item.alt} width = 300></li>`)

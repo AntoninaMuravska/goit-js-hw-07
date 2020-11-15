@@ -8,7 +8,7 @@ const ingredients = [
 ];
 
 const ingredientsRef = document.getElementById('ingredients');
-console.log(ingredientsRef);
+// console.log(ingredientsRef);
 
 // const itemOfIngridients = document.createElement('li');
 // itemOfIngridients.textContent = 'Картошка';
