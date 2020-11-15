@@ -17,8 +17,11 @@ const images = [
 ];
 
 const galleryRef = document.getElementById('gallery');
-// console.log(galleryRef);
+// // console.log(galleryRef);
 
-for (let item of images) {
-    galleryRef.insertAdjacentHTML('afterbegin', `<li><img src = ${item.url} alt = ${item.alt} width = 300></li>`)
-}
+// for (let item of images) {
+//     galleryRef.insertAdjacentHTML(`beforeend`, `<li><img src = ${item.url} alt = ${item.alt} width = 350 heigt = 250></li>`)
+// }
+
+const imagesSet = images.forEach(({ url, alt }) => 
+galleryRef.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='300', height='200'>`))
