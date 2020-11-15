@@ -17,3 +17,4 @@ const increment = () => {
 
 decBtnRef.addEventListener('click', () => { decrement(counterRef) });
 incBtnRef.addEventListener('click', () => { increment(counterRef) });
+
