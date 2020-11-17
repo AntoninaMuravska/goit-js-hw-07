@@ -15,6 +15,6 @@ const increment = () => {
     counterRef.textContent = counterValue;
 };
 
-decBtnRef.addEventListener('click', () =>  decrement() );
-incBtnRef.addEventListener('click', () =>  increment() );
+decBtnRef.addEventListener('click', () =>  decrement() ); // не ожидает аргумент, передавать не нужно
+incBtnRef.addEventListener('click', () =>  increment() ); // не ожидает аргумент, передавать не нужно
 

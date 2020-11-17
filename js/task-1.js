@@ -14,6 +14,7 @@ console.log(`В списке ${amountOfCategories} категории.`)
 
 // С методом forEach
 
+// вместо цикла for используем forEach
 categoriesRef.forEach(element => {
     const titleText = element.firstElementChild.textContent;
     const quantityOfElements = element.lastElementChild.children.length;

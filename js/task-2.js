@@ -20,6 +20,7 @@ const ingredientsRef = document.getElementById('ingredients');
 //     ingredientsRef.appendChild(itemOfIngridients);
 // })
 
+// чтобы ДОМ много раз не перерендерился при добавлении в него элемента на каждой итерации цикла forEach, нужно вставить все li за одну оперцию
 // создаем массив со всеми li
 const createIngredientsList = (ingredient) => {
   const itemOfIngridients = document.createElement('li');
@@ -28,7 +29,7 @@ const createIngredientsList = (ingredient) => {
   return itemOfIngridients;
 };
 
-// добавляем их в ДОМ
+// и только потом добавляем их в ДОМ
 const ingredientsList = ingredients.map(element => createIngredientsList(element));
 // console.log(ingredientsList)
 ingredientsRef.append(...ingredientsList)

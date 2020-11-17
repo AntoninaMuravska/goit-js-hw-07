@@ -19,11 +19,12 @@ const images = [
 const galleryRef = document.getElementById('gallery');
 // // console.log(galleryRef);
 
-// вариант 1 - не самый лучший
+// вариант 1 - не самый лучший тк ДОМ рендерится каждый раз при добавлении элемента
 // const imagesSet = images.forEach(({ url, alt }) => 
 // galleryRef.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='300', height='200'>`))
 
 // вариант 2
+// сначала создаем одну большую шаблонную строку и потом добавляем в ДОМ
 
 // создаем шаблонную строку
 const imageTags = ({ url, alt }) => {
