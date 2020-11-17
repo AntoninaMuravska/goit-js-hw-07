@@ -25,20 +25,38 @@ destroyRef.addEventListener('click', destroyBoxes);
 // random color generator function
 const randomColor = () => Math.random() * 256 >> 0;
 
+// 1 способ - не самый лучший (ДОМ рендерится много раз при добавлении в него элементов)
+// function createBoxes(amount) {
+//     amount = document.querySelector("#controls input").value;
+//     let initialSizeOfBox = 30;
+//     for (let i = 1; i <= amount; i += 1) {
+//         let sizeOfBox = initialSizeOfBox + i * 10;
+//         const newBox = document.createElement('div');
+//         newBox.style.cssText = `width: ${sizeOfBox}px; height: ${sizeOfBox}px; background-color: rgba(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+//         newBox.style.margin = '10px';
+//         boxesRef.append(newBox);
+//     }
+// }
+// console.dir(boxesRef);
+
+// 2 способ - сначала создаем массив со всеми newBox, а потом добавляем их за одну операцию в ДОМ
 function createBoxes(amount) {
     amount = document.querySelector("#controls input").value;
     let initialSizeOfBox = 30;
+    // создаем пустой массив
+    let arrayOfBoxes = [];
     for (let i = 1; i <= amount; i += 1) {
         let sizeOfBox = initialSizeOfBox + i * 10;
         const newBox = document.createElement('div');
         newBox.style.cssText = `width: ${sizeOfBox}px; height: ${sizeOfBox}px; background-color: rgba(${randomColor()}, ${randomColor()}, ${randomColor()})`;
         newBox.style.margin = '10px';
-        boxesRef.append(newBox);
+        // пушим newBox
+        return arrayOfBoxes.push(newBox);
+        
     }
-
+    // и только потом после цикла добавляем их в boxesRef
+boxesRef.append(newBox);
 }
-
-// console.dir(boxesRef);
 
 function destroyBoxes() {
     boxesRef.innerHTML = '';
