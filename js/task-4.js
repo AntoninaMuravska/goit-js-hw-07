@@ -15,6 +15,6 @@ const increment = () => {
     counterRef.textContent = counterValue;
 };
 
-decBtnRef.addEventListener('click', () => { decrement(counterRef) });
-incBtnRef.addEventListener('click', () => { increment(counterRef) });
+decBtnRef.addEventListener('click', () =>  decrement() );
+incBtnRef.addEventListener('click', () =>  increment() );
 
