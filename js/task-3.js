@@ -19,9 +19,20 @@ const images = [
 const galleryRef = document.getElementById('gallery');
 // // console.log(galleryRef);
 
-// for (let item of images) {
-//     galleryRef.insertAdjacentHTML(`beforeend`, `<li><img src = ${item.url} alt = ${item.alt} width = 350 heigt = 250></li>`)
-// }
+// вариант 1 - не самый лучший
+// const imagesSet = images.forEach(({ url, alt }) => 
+// galleryRef.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='300', height='200'>`))
 
-const imagesSet = images.forEach(({ url, alt }) => 
-galleryRef.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='300', height='200'>`))
+// вариант 2
+
+// создаем шаблонную строку
+const imageTags = ({ url, alt }) => {
+  return `<li> <img src = '${url}', alt = ${alt}, width='300', height='200'>`;
+}
+// console.log(imageTags)
+
+// добавляем ее в ДОМ
+const createImages = images.map(imageTags).join('')
+// console.dir(createImages)
+
+galleryRef.insertAdjacentHTML(`beforeend`, createImages);
