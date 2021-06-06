@@ -1,90 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница навигации</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #fff;
+        color: #424242;
+        line-height: 1.5;
+      }
+    </style>
 
-    <!-- task-1 -->
-
-    <ul id="categories">
-        <li class="item">
-            <h2>Животные</h2>
-    
-            <ul>
-                <li>Кот</li>
-                <li>Хомяк</li>
-                <li>Лошадь</li>
-                <li>Попугай</li>
-            </ul>
-        </li>
-        <li class="item">
-            <h2>Продукты</h2>
-    
-            <ul>
-                <li>Хлеб</li>
-                <li>Петрушка</li>
-                <li>Творог</li>
-            </ul>
-        </li>
-        <li class="item">
-            <h2>Технологии</h2>
-    
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node</li>
-            </ul>
-        </li>
+  </head>
+  <body>
+    <ul>
+      <li><a href="task-01.html">Задание 1</a></li>
+      <li><a href="task-02.html">Задание 2</a></li>
+      <li><a href="task-03.html">Задание 3</a></li>
+      <li><a href="task-04.html">Задание 4</a></li>
+      <li><a href="task-05.html">Задание 5</a></li>
+      <li><a href="task-06.html">Задание 6</a></li>
+      <li><a href="task-07.html">Задание 7</a></li>
+      <li><a href="task-08.html">Задание 8</a></li>
     </ul>
-
-    <!-- task-2 -->
-<ul id="ingredients"></ul>
-
-<!-- task-3 -->
-<ul id="gallery" class="gallery"></ul>
-
-<!-- task-4 -->
-<div id="counter">
-    <button type="button" data-action="decrement">-1</button>
-    <span id="value">0</span>
-    <button type="button" data-action="increment">+1</button>
-</div>
-
-<!-- task-5 -->
-<input type="text" placeholder="Ваше имя?" id="name-input" />
-<h1>Привет, <span id="name-output">незнакомец</span>!</h1>
-
-<!-- task-6 -->
-<input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов" />
-
-<!-- task-7 -->
-<input id="font-size-control" type="range" />
-<br />
-<span id="text">Абракадабра!</span>
-
-<!-- task-8 -->
-<div id="controls">
-    <input type="number" min="0" max="100" step="1" />
-    <button type="button" data-action="render">Создать</button>
-    <button type="button" data-action="destroy">Очистить</button>
-</div>
-
-<div id="boxes"></div>
-
-    <script src="./js/task-1.js" type="module"></script>
-    <script src="./js/task-2.js" type="module"></script>
-    <script src="./js/task-3.js" type="module"></script>
-    <script src="./js/task-4.js" type="module"></script>
-    <script src="./js/task-5.js" type="module"></script>
-    <script src="./js/task-6.js" type="module"></script>
-    <script src="./js/task-7.js" type="module"></script>
-    <script src="./js/task-8.js" type="module"></script>
-</body>
+  </body>
 </html>

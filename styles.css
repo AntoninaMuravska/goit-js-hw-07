@@ -3,17 +3,18 @@
   justify-content: space-around;
 }
 
-.gallery {
+#gallery {
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
   padding: 0;
+
 }
 
-.gallery li:not(:last-child) {
+#gallery li:not(:last-child) {
   margin-right: 20px;
 }
 
-.gallery li {
+#gallery li {
   list-style: none;
   justify-content: center;
 }
